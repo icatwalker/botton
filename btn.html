@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{
+      text-decoration: none;
+    }
+    .container{
+      position: absolute;
+      background:burlywood;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+    }
+    a{
+      text-align: center;
+      color: black;
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      background:linear-gradient(to top ,cornflowerblue,white);
+      box-shadow:inset 2px 2px 0 rgba(255,255,255,.4),inset -2px -2px 0 rgba(0,0,0,.5);
+    }
+    button{
+      background:linear-gradient(to top ,cornflowerblue,white);
+    }
+    a.active{
+      box-shadow:inset -2px -2px 0 rgba(255,255,255,.4),inset 2px 2px 0 rgba(0,0,0,.5);
+      opacity: .9;
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <button >你妹</button>
+  <a href="#" class="">你咩</a>
+  <a href="#" class="">你说</a>
+</div>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+  $("a").on("mousedown",function(){
+    console.log("1");
+    console.log(this);
+    $(this).toggleClass("active");
+  });
+  $("a").on("mouseup",function(){
+    console.log("1");
+    console.log(this);
+    $(this).removeClass("active");
+  });
+
+
+
+
+</script>
+</body>
+</html>
